@@ -1,0 +1,3 @@
+readme_help.utils.readme:
+    class: Drupal\readme_help\Service\ReadmeUtils
+    arguments: ['@module_handler', '@plugin.manager.filter', '@language_manager', '@string_translation']

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Hooks.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\readme_help\HookHelpManager;
+
+/**
+ * Implements hook_help().
+ */
+function readme_help_help($route_name, RouteMatchInterface $route_match) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(HookHelpManager::class)
+    ->help($route_name, $route_match);
+}
