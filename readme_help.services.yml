@@ -1,13 +1,14 @@
-readme_help.utils.readme:
-    class: Drupal\readme_help\Service\ReadmeUtils
-    arguments: ['@module_handler']
+services:
+  readme_help.utils.readme:
+      class: Drupal\readme_help\Service\ReadmeUtils
+      arguments: ['@module_handler']
 
-readme_help.output_events_subscriber:
-    class: Drupal\readme_help\EventSubscriber\OutputEventsSubscriver
-    arguments:
-      - '@module_handler'
-      - '@plugin.manager.filter'
-      - '@language_manager'
-      - '@string_translation'
-    tags:
-      - { name: event_subscriber }
+  readme_help.output_events_subscriber:
+      class: Drupal\readme_help\EventSubscriber\OutputEventsSubscriver
+      arguments:
+        - '@module_handler'
+        - '@plugin.manager.filter'
+        - '@language_manager'
+        - '@string_translation'
+      tags:
+        - { name: event_subscriber }
