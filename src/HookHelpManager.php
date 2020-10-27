@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\acreat_realestate_search;
+namespace Drupal\readme_help;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;

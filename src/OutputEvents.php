@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\acreat_realestate_search;
+namespace Drupal\readme_help;
 
 /**
  * Defines events for the readme output system.
