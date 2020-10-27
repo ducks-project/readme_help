@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Drupal\readme_help\Component;
+namespace Drupal\readme_help\Component;
 
 use RuntimeException;
 use SplFileInfo;
