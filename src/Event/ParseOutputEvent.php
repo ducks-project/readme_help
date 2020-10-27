@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Drupal\readme_help\Event;
+namespace Drupal\readme_help\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 use Drupal\readme_help\OutputEvents;
@@ -11,7 +11,7 @@ use Drupal\readme_help\Component\FileInfoContents;
  */
 class ParseOutputEvent extends Event {
 
-  const EVENT_NAME = OutputEvents::NORMALIZE_FILTER;
+  const EVENT_NAME = OutputEvents::PARSE;
 
   /**
    * The output.
