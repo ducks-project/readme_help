@@ -87,7 +87,7 @@ class OutputEventsSubscriver implements EventSubscriberInterface {
             else {
               $collection = new FilterPluginCollection($this->filterManager, []);
               $markdown = $collection->get('markdown');
-              $output = $markdown->process($file->getPathname(), $this->languageManager->getCurrentLanguage()->getId());
+              $output = $markdown->process($file->getContents(), $this->languageManager->getCurrentLanguage()->getId());
             }
             $file->setContents($output);
             $event->setParsed(TRUE);
