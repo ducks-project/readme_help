@@ -2,6 +2,7 @@
 
 namespace Drupal\readme_help\Service;
 
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\readme_help\Component\FileInfoContents;
 use Drupal\readme_help\Event\ParseOutputEvent;
@@ -10,6 +11,13 @@ use Drupal\readme_help\Event\ParseOutputEvent;
  * Helper for array.
  */
 class ReadmeUtils {
+
+  /**
+   * The search field manager.
+   *
+   * @var \Symfony\Component\EventDispatcher\EventDispatcherInterface
+   */
+  protected $eventDispatcher;
 
   /**
    * The moduleHandler.
@@ -22,8 +30,10 @@ class ReadmeUtils {
    * Constructor.
    */
   public function __construct(
+    EventDispatcherInterface $event_dispatcher,
     ModuleHandlerInterface $moduleHandler
   ) {
+    $this->eventDispatcher = $event_dispatcher;
     $this->moduleHandler = $moduleHandler;
   }
 

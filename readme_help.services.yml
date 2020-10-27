@@ -1,7 +1,9 @@
 services:
   readme_help.utils.readme:
       class: Drupal\readme_help\Service\ReadmeUtils
-      arguments: ['@module_handler']
+      arguments:
+        - '@event_dispatcher'
+        - '@module_handler'
 
   readme_help.output_events_subscriber:
       class: Drupal\readme_help\EventSubscriber\OutputEventsSubscriver
