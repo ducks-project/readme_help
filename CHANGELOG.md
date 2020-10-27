@@ -13,8 +13,10 @@ Types of changes :
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+
+## [1.0] - 2020-10-27
 ### Added
 - init
 
-[Unreleased]: https://git.drupal.org/project/readme_help/compare/1.x...HEAD
+[Unreleased]: https://git.drupal.org/project/readme_help/compare/1.0...HEAD
 [1.0]: https://git.drupal.org/project/readme_help/tree/1.0
