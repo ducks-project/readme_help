@@ -13,6 +13,8 @@ Types of changes :
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Added
+- ReadmeUtilsInterface
 
 ## [1.0] - 2020-10-27
 ### Added

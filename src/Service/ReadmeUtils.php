@@ -8,9 +8,9 @@ use Drupal\readme_help\Component\FileInfoContents;
 use Drupal\readme_help\Event\ParseOutputEvent;
 
 /**
- * Helper for array.
+ * Helper for README.
  */
-class ReadmeUtils {
+class ReadmeUtils implements ReadmeUtilsInterface {
 
   /**
    * The search field manager.
@@ -38,7 +38,7 @@ class ReadmeUtils {
   }
 
   /**
-   * Return the formatted output for a Readme.
+   * {@inheritdoc}
    */
   public function getFormattedReadmeOutput(string $moduleName, string $extension = 'md') : string {
     $filepath = $this->moduleHandler->getModule($moduleName)->getPath() . DIRECTORY_SEPARATOR . 'README.' . $extension;
